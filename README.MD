@@ -1,25 +1,29 @@
 # SEA Stage 2 - Data Catalog Project
 
-This is my Dog Catalog project built on SEA Data Catalog sample. Dog data is fetching from thedogapi API (https://thedogapi.com/). 
-There is a separate breeds enpoints and images endpoints. I used images endpoints that have info about breed. 
-With auth_key I could get maximum 100 dog info per requests. 
-The code is making 30 requests, which generates approx. 170 different dog breeds.I kept original code in comments as well.
+Welcome to my Dog Catalog project, inspired by the SEA Data Catalog sample. This project leverages data fetched from thedogapi API (https://thedogapi.com/), which provides separate endpoints for breeds and images.
 
- 1. I used the following data structures:
-      -Dog class, 
-      -arrays of dogs and,
-      -dictionary with dog names as a key and dog objext as a value (for stroing unique dog breeds, as there are duplicate dogs data with only difference of image URLs)
+To handle the data effectively, I implemented the following data structures:
 
- 2. I have the following features:
-      - search by keyword
-      - sort ascending or descending
-      - reset initial loaded cards
+- Dog Class: A structured representation of dog data.
+- Arrays of Dogs: To store multiple instances of dog data.
+- Dictionary: Utilized for maintaining unique dog breeds, with dog names as keys and corresponding dog objects as values. This helps avoid duplication, especially considering variations in image URLs.
 
-## Challenges
-1. Initially I wanted to fetch all data with one requests and save all data in JSON file in mycode directory. However there was not GET endpoint for fetching all data.
-2. I could use JSON local file as a data source, since I would need to establish local server to call the file through localhost.
+##Key Features:
 
-## Further enhancements
-1. If I have a more tim I would add Range sliders to filter by dog height and weight.
-2. I was thinking to add "Close" button for each card to remove cards individually.
+- Search by Keyword: Allows users to search for specific dog breeds or characteristics.
+- Sort Ascending or Descending: Provides flexibility in sorting the displayed dog cards.
+- Reset Initial Loaded Cards: Enables users to revert to the original set of loaded cards.
 
+##Challenges Faced:
+
+Data Fetching Limitation: Initially, I aimed to retrieve all data in a single request and store it locally as a JSON file. However, due to the lack of a GET endpoint for fetching all data, I had to explore alternative approaches.
+
+Local JSON File Usage: While using a JSON file as a data source seemed feasible, it would have required setting up a local server to access the file through localhost.
+
+##Future Enhancements:
+
+Range Sliders for Filtering: Implementing range sliders would enhance the user experience by allowing filtering based on dog height and weight.
+
+Individual Card Removal: Adding a "Close" button to each card would offer users the ability to remove cards individually, enhancing interactivity and customization options.
+
+Thank you for exploring my Dog Catalog project. If you have any questions or suggestions, feel free to reach out!
