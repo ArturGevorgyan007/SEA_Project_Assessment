@@ -1,19 +1,4 @@
-/** This is my Dog Catalog project built on SEA Data Catalog sample. Dog data is fetching from thedogapi API. 
- * There is a separate breeds enpoints and images endpoints. I used images enpoints that have info about breed. 
- * With auth_key I could get maximum 100 dog info per requests. 
- * The code is doing 30 requests, which generates approx. 170 different dog breeds.I kept original code in comments as well.
- * 
- * 1. I used thefollowing data structures:
- *      -Dog class, 
- *      -arrays of dogs and,
- *      -dictionary with dog names as a key and dog objext as a value
- * 2. I have the following features:
- *      - search by keyword
- *      - sort ascending or descending
- *      - reset initial loaded cards
- * 
- * 
- * 
+/** git 
  * */
 
 
@@ -129,8 +114,8 @@ class Dog {
 
 //Fetching dogs from thedogapi.com API. Doing 30 get requests, each request 100 dogs.
 const fetchDogBreed = async () => {
-    for (let i=1; i<=30; i++) {
-        loadingSteps=parseInt(100*i/30);
+    for (let i=1; i<=25; i++) {
+        loadingSteps=parseInt(100*i/25);
         const responseBreeds = await fetch("https://api.thedogapi.com/v1/images/search?api_key=live_JTPFF0F23xHHEPZVfDYktIsefkwJynxEwBWDXB8wREjTnU5kwbhAcnjcW7QR3sgq&has_breeds=1&page="+i+"&limit=100")
         const dogBreeds = await responseBreeds.json();
         console.log("https://api.thedogapi.com/v1/images/search?api_key=live_JTPFF0F23xHHEPZVfDYktIsefkwJynxEwBWDXB8wREjTnU5kwbhAcnjcW7QR3sgq&has_breeds=1&page="+i+"&limit=100");
@@ -272,7 +257,7 @@ document.addEventListener("DOMContentLoaded", function() {
             console.log(loadingSteps);
             updateLoadingPercentage(loadingSteps);  
         }
-    }, 500);
+    }, 1000);
 
     // Function to update loading percentage
     function updateLoadingPercentage(percentage) {
