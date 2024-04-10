@@ -1,39 +1,61 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <title>LA TV Shows | Home</title>
-    <meta name="description" content="A Catalog of Shows Set in Los Angeles">
-    <link rel="stylesheet" href="style.css" />
-    <script type="text/javascript" src="scripts.js"></script>
-</head>
+    <head>
+        <title>Doggy Cards | Home</title>
+        <meta name="description" content="A Catalog of Dogs">
+        <link rel="stylesheet" href="style.css" />
+        <script type="text/javascript" src="scripts.js"></script>
+    </head>
 
-<body>
-    <header class="main-header">
-        <h1 class="title">LA TV Shows</h1>
-    </header>
-    <div id="card-container">
+    <body>
+        <header class="main-header">
+            <h1 class="title">Our loyal friends</h1>
+        </header>
         
-    </div>
-    <div class="card" style="display: none;">
-        <div class="card-content">
-            <h2>TV Show Title</h2>
-            <img src="" alt="TV Show Poster">
-            <ul>
-                <li>Bullet Point 1</li>
-                <li>Bullet Point 2</li>
-                <li>Bullet Point 3</li>
-            </ul>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Enter search query...">
+            <button onclick="search();">Search</button>
+            <div id="searchResultsCount" class="search-results-count"></div>
+            <button onclick="reset();" class="reset-button">Reset</button>
         </div>
-    </div>
-    <div class="footer">
-        <button onclick="quoteAlert();">
-            Get A Quote!
-        </button>
-        <button onclick="removeLastCard();">
-            Remove A Card!
-        </button>
-    </div>
-</body>
+
+        <label>
+            <input id="ascending" type="radio" name="sortOrder" value="ascending"> Ascending
+        </label>
+        <label>
+            <input id="descending" type="radio" name="sortOrder" value="descending"> Descending
+        </label>
+        
+        <div id="card-container">
+            <div id="loading-container" class="loading-container">
+                <div id="loading-animation" class="loading-animation"></div>
+                <div id="loading-text" class="loading-text">Please wait while doggy cards are loading...<span id="loading-percentage">0%</span></div>            </div>
+        </div>
+        <div class="card" style="display: none;">
+            <div class="card-content">
+                <h2>TV Show Title</h2>
+                <img src="" alt="TV Show Poster">
+                <ul>
+                    <li id="bp1">Bullet Point 1</li>
+                    <li id="bp2">Bullet Point 2</li>
+                    <li id="bp3">Bullet Point 3</li>
+                    <li id="bp4">Bullet Point 4</li>
+                    <li id="bp5">Bullet Point 5</li>
+                    <li id="bp6">Bullet Point 6</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <button onclick="barkAlert();">
+                Get A Bark!
+            </button>
+            <button onclick="removeLastCard();">
+                Remove A Card!
+            </button>
+        </div>
+
+    </body>
 
 </html>

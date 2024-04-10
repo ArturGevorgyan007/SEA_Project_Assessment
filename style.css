@@ -18,10 +18,16 @@ body {
     color: white;
 }
 
-#card-container {
+/* #card-container {
     display: flex;
     justify-content: center;
     margin: 20px;
+} */
+
+#card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
 
 .card {
@@ -67,4 +73,57 @@ button {
     font-size: 22px;
     cursor: pointer;
     margin: 5px;
+}
+
+.loading-animation {
+    /* Add your loading animation styles here */
+    /* For example: */
+    width: 50px;
+    height: 50px;
+    border: 8px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 8px solid #3498db;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 120px;
+    margin-left: -25px;
+    display: none; /* Initially hide the animation */
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .loading-container {
+    position: absolute;
+    width: 100%;
+  }
+  
+  .loading-text {
+    position: center;
+    top: 50%;
+    left: 50%;
+    margin-top: 180px;
+    margin-left: -25px;
+    font-size: 22px;
+    color: #ff0000; /* Adjust color as needed */
+    text-align: center;
+  }
+
+  .search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-results-count {
+    margin-left: 10px; /* Adjust the margin as needed */
+    color: #ff0000;
+}
+
+.reset-button {
+    position: absolute;
+    right: 0;
 }
