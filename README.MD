@@ -14,7 +14,7 @@ To handle the data effectively, I implemented the following data structures:
 - Sort Ascending or Descending: Provides flexibility in sorting the displayed dog cards.
 - Reset Initial Loaded Cards: Enables users to revert to the original set of loaded cards.
 
-https://1drv.ms/i/c/04c34506f7e42945/EUuIe4SMbhJDhH1g-nbOWvkBi-DDl41DkclkB-LHNDP6-g?e=6AHTYb
+![Alt Text](https://github.com/ArturGevorgyan007/SEA_Project_Assessment/blob/main/Screenshot%202024-04-09%20223350.png)
 
 ## Challenges Faced:
 
